@@ -1,0 +1,25 @@
+{
+    "name": "testcafe-rpc",
+    "author": "DevExpress (www.devexpress.com)",
+    "version": "0.5.0",
+    "keywords": [
+        "TestCafe",
+        "RPC",
+        "remoting",
+        "remote",
+        "testing",
+        "functional"
+    ],
+    "main": "./index.js",
+
+    "dependencies": {
+        "dnode": "~1.0.5",
+        "testcafe": "~13.1.1"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-nodeunit": "~0.2.0",
+        "node-phantom": "~0.2.3",
+        "phantomjs": "~1.9.2-0"
+    }
+}
