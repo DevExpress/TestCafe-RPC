@@ -50,7 +50,7 @@ var rpcHostname = 'myhostname',
     rpcPort = 1339;
 
 //Connect to the existent TestCafé server (if your client and server are running on the same machine
-//hostname-parameter can be ommited).
+//the hostname parameter can be ommited).
 var testCafeClient = new TestCafeRemote.Client(rpcPort, rpcHostname);
 
 //Client can be used as a regular TestCafé instance with exception that listAvailableBrowsers() and listConnectedWorkers()
