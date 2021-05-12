@@ -1,6 +1,9 @@
+# ‚ö†Ô∏èThis package is now deprecated‚ö†Ô∏è
+It is not compatible with [TestCafe v1.x](https://testcafe.io), and will receive no future updates. We highly recommend all `testcafe-rpc` users migrate to a recent version of TestCafe. Visit [https://testcafe.io](https://testcafe.io) to learn how.
+
 TestCafe RPC
 ======
-RPC library for the [TestCafÈ](http://testcafe.devexpress.com/). It allows you to create a single TestCafÈ instance and then interact with it programmatically from any machine in your network.
+RPC library for [TestCaf√© v2015.1](http://testcafe.devexpress.com/). It allows you to create a single instance of TestCaf√© v2015.1, and interact with it programmatically from any machine in your network.
 
 
 Install
@@ -14,7 +17,7 @@ Running a server
 ```js
 var TestCafeRemote = require('testcafe-rpc');
 
-//Options for TestCafÈ instance
+//Options for TestCaf√© instance
 var opt = {
         controlPanelPort: 1337,
         servicePort: 1338,
@@ -29,10 +32,10 @@ var opt = {
     },
     rpcPort = 1339;
 
-//Create TestCafÈ server instance with given options which can be accessed via RPC on port 1339.
+//Create TestCaf√© server instance with given options which can be accessed via RPC on port 1339.
 var testCafeServer = new TestCafeRemote.Server(opt, rpcPort);
 
-//Returned object exposes standard TestCafÈ API, so you can use it as a regular TestCafÈ instance.
+//Returned object exposes standard TestCaf√© API, so you can use it as a regular TestCaf√© instance.
 testCafeServer.runTests({ browsers: testCafeServer.listAvailableBrowsers() }, function (errors, taskUid, workers) {
     //do smthg...
 });
@@ -46,11 +49,11 @@ var TestCafeRemote = require('testcafe-rpc');
 var rpcHostname = 'myhostname',
     rpcPort = 1339;
 
-//Connect to the existent TestCafÈ server (if you running both client and server on the same machine
-//hostname-parameter can be ommited).
+//Connect to the existent TestCaf√© server (if your client and server are running on the same machine
+//the hostname parameter can be ommited).
 var testCafeClient = new TestCafeRemote.Client(rpcPort, rpcHostname);
 
-//Client can be used as a regular TestCafÈ instance with exception that listAvailableBrowsers() and listConnectedWorkers()
+//Client can be used as a regular TestCaf√© instance with exception that listAvailableBrowsers() and listConnectedWorkers()
 //are asynchronous methods.
 testCafeClient.listAvailableBrowsers(function(browsers) {
     testCafeClient.runTests({ browsers: browsers }, function (errors, taskUid, workers) {
@@ -60,5 +63,4 @@ testCafeClient.listAvailableBrowsers(function(browsers) {
 ```
 Need more help to get started?
 --------------
-Visit TestCafÈ  [Continuous integration guide](http://testcafe.devexpress.com/Documentation/Tutorial/Continuous_Integration) and [Continuous integration API reference](http://testcafe.devexpress.com/Documentation/ApiReference/Continuous_Integration_API_Reference). If you have any additional questions or suggestions don't hesitate to ask using [DevExpress Support Center](http://www.devexpress.com/Support/Center/Question/ChangeFilterSet/1?FavoritesOnly=False&MyItemsOnly=False&MyTeamItemsOnly=False&TechnologyName=Testing+Tools&PlatformName=AllPlatforms&ProductName=AllProducts&TicketType=All).
-
+Read the [Continuous integration guide](http://testcafe.devexpress.com/Documentation/Tutorial/Continuous_Integration) and the [Continuous integration API reference](http://testcafe.devexpress.com/Documentation/ApiReference/Continuous_Integration_API_Reference) to learn more.
