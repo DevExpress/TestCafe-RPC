@@ -1,9 +1,9 @@
 # ⚠️This package is now deprecated⚠️
-It will receive no future updates. Please visit https://testcafe.io for instructions about installing and using the most recent TestCafe version.
+It is not compatible with [TestCafe v1.x](https://testcafe.io), and will receive no future updates. We highly recommend all `testcafe-rpc` users migrate to a recent version of TestCafe. Visit [https://testcafe.io](https://testcafe.io) to learn how.
 
 TestCafe RPC
 ======
-RPC library for the [TestCafé](http://testcafe.devexpress.com/). It allows you to create a single TestCafé instance and then interact with it programmatically from any machine in your network.
+RPC library for [TestCafé v2015.1](http://testcafe.devexpress.com/). It allows you to create a single instance of TestCafé v2015.1, and interact with it programmatically from any machine in your network.
 
 
 Install
@@ -49,7 +49,7 @@ var TestCafeRemote = require('testcafe-rpc');
 var rpcHostname = 'myhostname',
     rpcPort = 1339;
 
-//Connect to the existent TestCafé server (if you running both client and server on the same machine
+//Connect to the existent TestCafé server (if your client and server are running on the same machine
 //hostname-parameter can be ommited).
 var testCafeClient = new TestCafeRemote.Client(rpcPort, rpcHostname);
 
@@ -63,5 +63,4 @@ testCafeClient.listAvailableBrowsers(function(browsers) {
 ```
 Need more help to get started?
 --------------
-Visit TestCafé  [Continuous integration guide](http://testcafe.devexpress.com/Documentation/Tutorial/Continuous_Integration) and [Continuous integration API reference](http://testcafe.devexpress.com/Documentation/ApiReference/Continuous_Integration_API_Reference). If you have any additional questions or suggestions don't hesitate to ask using [DevExpress Support Center](http://www.devexpress.com/Support/Center/Question/ChangeFilterSet/1?FavoritesOnly=False&MyItemsOnly=False&MyTeamItemsOnly=False&TechnologyName=Testing+Tools&PlatformName=AllPlatforms&ProductName=AllProducts&TicketType=All).
-
+Read the [Continuous integration guide](http://testcafe.devexpress.com/Documentation/Tutorial/Continuous_Integration) and the [Continuous integration API reference](http://testcafe.devexpress.com/Documentation/ApiReference/Continuous_Integration_API_Reference) to learn more.
